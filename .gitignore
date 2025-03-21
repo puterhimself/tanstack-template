@@ -1,0 +1,48 @@
+# dependencies
+node_modules
+.pnp
+.pnp.js
+
+# testing
+coverage
+
+# build
+dist
+.output
+.vinxi
+
+# misc
+.DS_Store
+*.pem
+.eslintcache
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Typescript
+*.tsbuildinfo
+
+# lockfiles
+pnpm-lock.yaml
+yarn.lock
+# keep bun.lock
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw? 
