@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vinxi dev",
     "build": "vinxi build",
-    "start": "vinxi start",
+    "start": "bunx --bun vinxi start",
     "lint": "biome check --write --fix ./src",
     "format": "biome format --write ./src",
     "db:generate": "drizzle-kit generate",

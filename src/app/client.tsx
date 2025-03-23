@@ -2,15 +2,15 @@
 import { hydrateRoot } from "react-dom/client";
 import { StartClient } from "@tanstack/react-start";
 import { ThemeProvider } from "~/components/theme-provider";
-import { QueryClientProvider } from "@tanstack/react-query";
-import { createRouter, queryClient } from "./router";
+import { TrpcProvider } from "~/components/trpc-provider";
+import { createRouter } from "./router";
 
 const router = createRouter();
 hydrateRoot(
 	document,
 	<ThemeProvider defaultTheme="system" attribute="class">
-		<QueryClientProvider client={queryClient}>
+		<TrpcProvider>
 			<StartClient router={router} />
-		</QueryClientProvider>
+		</TrpcProvider>
 	</ThemeProvider>,
 );
