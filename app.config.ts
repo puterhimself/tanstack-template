@@ -1,22 +1,29 @@
-import { defineConfig } from "@tanstack/react-start/config";
-import tsConfigPaths from "vite-tsconfig-paths";
-import tailwindcss from "@tailwindcss/vite";
+import tailwindcss from '@tailwindcss/vite';
+import { defineConfig } from '@tanstack/react-start/config';
+import tsConfigPaths from 'vite-tsconfig-paths';
 
 export default defineConfig({
-	tsr: {
-		appDirectory: "src/app",
-	},
-	server: {
-		preset: "bun",
-	},
-	vite: {
-		plugins: [
-			tsConfigPaths({
-				projects: ["./tsconfig.json"],
-			}),
-			tailwindcss(),
-		],
-	},
+  tsr: {
+    appDirectory: 'src/app',
+  },
+  server: {
+    preset: 'bun',
+  },
+  vite: {
+    // build: {
+    //   ssr: './src/app/ssr.tsx',
+    //   rollupOptions: {
+    //     input: './src/app/ssr.tsx',
+    //     external: ['tsr:routes-manifest'],
+    //   },
+    // },
+    plugins: [
+      tsConfigPaths({
+        projects: ['./tsconfig.json'],
+      }),
+      tailwindcss(),
+    ],
+  },
 });
 // import path from 'node:path';
 // import { fileURLToPath } from 'node:url';
@@ -24,7 +31,7 @@ export default defineConfig({
 // import { defineConfig } from '@tanstack/react-start/config';
 // import react from '@vitejs/plugin-react';
 // import viteTsConfigPaths from 'vite-tsconfig-paths';
-// // import reactRefresh from "@vitejs/plugin-react-refresh";
+// import reactRefresh from "@vitejs/plugin-react-refresh";
 // const __filename = fileURLToPath(import.meta.url);
 // const __dirname = path.dirname(__filename);
 
@@ -56,10 +63,10 @@ export default defineConfig({
 //       manifest: true,
 //       ssrManifest: true,
 //       ssr: './src/app/ssr.tsx',
-//       rollupOptions: {
-//         input: path.resolve(__dirname, './src/app/ssr.tsx'),
-//         external: ['tsr:routes-manifest'],
-//       },
+//   rollupOptions: {
+//     input: path.resolve(__dirname, './src/app/ssr.tsx'),
+//     external: ['tsr:routes-manifest'],
+//   },
 //     },
 //   },
 // });
